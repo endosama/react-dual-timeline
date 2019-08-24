@@ -4,6 +4,7 @@ const config = {
   mediaWidthMed: 900,
   mediaWidthSmall: 700,
   activeColor: '#F45B69',
+  circleColor: '#F45B69',
   color: 'black',
   twoSidedOverlap: 80, // negative overlap between items if two-sided
   animations: true,

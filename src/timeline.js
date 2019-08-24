@@ -83,6 +83,7 @@ Timeline.propTypes = {
   mediaWidthMed: PropTypes.number,
   mediaWidthSmall: PropTypes.number,
   activeColor: PropTypes.string,
+  circleColor: PropTypes.string,
   color: PropTypes.string,
   twoSidedOverlap: PropTypes.number,
   animations: PropTypes.bool,

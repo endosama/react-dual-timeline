@@ -19,7 +19,7 @@ export class Entry extends React.Component {
     const { children, icon, ...props } = this.props
     const { inView } = this.state
 
-    const { lineWidth, circleWidth, paddingTop, lineColor, activeColor,
+    const { lineWidth, circleWidth, paddingTop, lineColor, activeColor, circleColor,
       mediaWidthSmall, twoSidedOverlap, animations } = this.props.config
 
     const styles = {
@@ -61,7 +61,7 @@ export class Entry extends React.Component {
           }
         },
         inView: {
-          background: activeColor,
+          background: circleColor || activeColor,
         }
       },
     }
