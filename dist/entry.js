@@ -72,6 +72,7 @@ var Entry = exports.Entry = function (_React$Component) {
           paddingTop = _props$config.paddingTop,
           lineColor = _props$config.lineColor,
           activeColor = _props$config.activeColor,
+          circleColor = _props$config.circleColor,
           mediaWidthSmall = _props$config.mediaWidthSmall,
           twoSidedOverlap = _props$config.twoSidedOverlap,
           animations = _props$config.animations;
@@ -114,7 +115,7 @@ var Entry = exports.Entry = function (_React$Component) {
             }
           },
           inView: {
-            background: activeColor
+            background: circleColor || activeColor
           }
         }
       };
