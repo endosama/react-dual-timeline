@@ -72,7 +72,8 @@ var Entry = exports.Entry = function (_React$Component) {
           paddingTop = _props$config.paddingTop,
           lineColor = _props$config.lineColor,
           activeColor = _props$config.activeColor,
-          circleColor = _props$config.circleColor,
+          lineStepColor = _props$config.lineStepColor,
+          lineStepShape = _props$config.lineStepShape,
           mediaWidthSmall = _props$config.mediaWidthSmall,
           twoSidedOverlap = _props$config.twoSidedOverlap,
           animations = _props$config.animations;
@@ -97,10 +98,10 @@ var Entry = exports.Entry = function (_React$Component) {
           base: {
             position: 'absolute',
             bottom: '0',
-            transform: 'translateX(-50%)',
+            transform: lineStepShape === 'romboid' ? 'rotate(45deg) translateX(-70%)' : 'translateX(-50%)',
             width: circleWidth + 'px',
             height: circleWidth + 'px',
-            borderRadius: '50%',
+            borderRadius: lineStepShape === 'circle' ? '50%' : '0',
             background: lineColor,
             transition: animations ? 'background .5s ease-in-out' : null,
             zIndex: 1
@@ -115,7 +116,7 @@ var Entry = exports.Entry = function (_React$Component) {
             }
           },
           inView: {
-            background: circleColor || activeColor
+            background: lineStepColor || activeColor
           }
         }
       };

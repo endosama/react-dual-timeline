@@ -9,7 +9,8 @@ var config = {
   mediaWidthMed: 900,
   mediaWidthSmall: 700,
   activeColor: '#F45B69',
-  circleColor: '#F45B69',
+  lineStepColor: '#F45B69',
+  lineStepShape: 'romboid',
   color: 'black',
   twoSidedOverlap: 80, // negative overlap between items if two-sided
   animations: true,
