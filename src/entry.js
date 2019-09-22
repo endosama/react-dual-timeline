@@ -19,7 +19,7 @@ export class Entry extends React.Component {
     const { children, icon, ...props } = this.props
     const { inView } = this.state
 
-    const { lineWidth, circleWidth, paddingTop, lineColor, activeColor, circleColor,
+    const { lineWidth, circleWidth, paddingTop, lineColor, activeColor, lineStepColor, lineStepShape,
       mediaWidthSmall, twoSidedOverlap, animations } = this.props.config
 
     const styles = {
@@ -43,10 +43,10 @@ export class Entry extends React.Component {
         base: {
           position: 'absolute',
           bottom: '0',
-          transform: 'translateX(-50%)',
+          transform: lineStepShape === 'romboid' ? 'rotate(45deg) translateX(-70%)' :'translateX(-50%)',
           width: circleWidth + 'px',
           height: circleWidth + 'px',
-          borderRadius: '50%',
+          borderRadius: lineStepShape === 'circle' ? '50%' : '0',
           background: lineColor,
           transition: animations ? 'background .5s ease-in-out' : null,
           zIndex: 1,
@@ -61,7 +61,7 @@ export class Entry extends React.Component {
           }
         },
         inView: {
-          background: circleColor || activeColor,
+          background: lineStepColor || activeColor,
         }
       },
     }
